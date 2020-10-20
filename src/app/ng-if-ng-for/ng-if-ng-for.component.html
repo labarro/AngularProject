@@ -1,5 +1,6 @@
 <!-- NgIf trabalha com resultados booleanos (true e false) -->
 <input (input)="numero = $event.target.value"/>
+<h2>{{ numero }}</h2>
 <h2 *ngIf="numero > 5">Numero maior que 5</h2>
 <div *ngFor="let n of arrNumeros">
 <h1 *ngIf="n > 5">{{ n }}</h1>

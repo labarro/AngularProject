@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PaiComponent } from './components/pai/pai.component';
 import { CrudComponent } from './crud/crud.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { NgIfNgForComponent } from './ng-if-ng-for/ng-if-ng-for.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'primeiro-componente', component: DataBindingComponent },
   { path: 'segundo-componente', component: SegundoComponenteComponent },
   { path: 'teste', component: NgIfNgForComponent },
+  { path: 'Pai', component: PaiComponent },
 ];
 
 @NgModule({
