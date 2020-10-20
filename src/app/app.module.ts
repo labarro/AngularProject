@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { SegundoComponenteComponent } from './segundo-componente/segundo-componente.component';
 import { NgIfNgForComponent } from './ng-if-ng-for/ng-if-ng-for.component';
 import { CrudComponent } from './crud/crud.component';
+import { LazyloadingModule } from './modules/lazyloading/lazyloading.module';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,8 @@ import { CrudComponent } from './crud/crud.component';
     NgIfNgForComponent,
     CrudComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [],
+  imports: [BrowserModule,AppRoutingModule,HttpClientModule, LazyloadingModule],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

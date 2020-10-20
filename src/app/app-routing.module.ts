@@ -8,6 +8,11 @@ import { CrudService } from './services/crud.service';
 
 
 const routes: Routes = [
+  
+  { path: '', component: NgIfNgForComponent },
+
+  { path: 'lazy', loadChildren: () => import('./modules/lazyloading/lazyloading.module').then(m => m.LazyloadingModule) },
+
   { path: 'primeiro-componente', component: DataBindingComponent },
   { path: 'segundo-componente', component: SegundoComponenteComponent },
   { path: 'teste', component: NgIfNgForComponent },
